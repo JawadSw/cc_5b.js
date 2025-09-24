@@ -18,7 +18,7 @@ const cart = [
 // Try: "regular", "student", "member", or "vip"
 const customerType = "member";
 
-
+//step 1
 function getCategoryDiscount(category) {
     switch (category) {
     case "gear" :
@@ -33,7 +33,7 @@ function getCategoryDiscount(category) {
 
     }
 }
-
+//step 2
 console.log(getCategoryDiscount("gear"));
 console.log(getCategoryDiscount("apparel"));
 console.log(getCategoryDiscount("snacks"));
@@ -41,5 +41,8 @@ console.log(getCategoryDiscount("access"));
 
 function priceAfterCategoryDiscount(product) {
     const rate = getCategoryDiscount(product.category);
-    const discountedprice
+    const discountedPrice = product.price * (1 - rate);
+    return discountedPrice;
 }
+const testProduct = {id: 202, name: "Team Jersey",         category: "apparel", price: 49.5};
+console.log (priceAfterCategoryDiscount(testProduct));
