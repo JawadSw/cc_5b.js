@@ -53,3 +53,16 @@ const testProduct = {id: 202, name: "Team Jersey",         category: "apparel", 
 console.log (priceAfterCategoryDiscount(testProduct));
 
 //step 3
+
+    
+function findProductById(id){
+    for (let product of products) {
+        if (product.id === id)
+        //do something
+        return product;
+      }
+          return null
+    }
+
+    console.log (findProductById(202));
+    
