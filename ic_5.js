@@ -22,27 +22,34 @@ const customerType = "member";
 function getCategoryDiscount(category) {
     switch (category) {
     case "gear" :
-    return 0.10;
+    return 0.10
+    break;
     case "apparel" :
-    return 0.15;
+    return 0.15
+    break;
     case "snacks" :
-    return 0.08;
+    return 0.08
+    break;
     case "access" :
-    return 0.05;
+    return 0.05
+    break;
     default: return 0
+    break;
 
     }
 }
-//step 2
+
 console.log(getCategoryDiscount("gear"));
 console.log(getCategoryDiscount("apparel"));
 console.log(getCategoryDiscount("snacks"));
 console.log(getCategoryDiscount("access"));
-
+//step 2
 function priceAfterCategoryDiscount(product) {
-    const rate = getCategoryDiscount(product.category);
-    const discountedPrice = product.price * (1 - rate);
-    return discountedPrice;
+     rate = getCategoryDiscount(product.category);
+    return (product.price) * (1- rate)
+     
 }
 const testProduct = {id: 202, name: "Team Jersey",         category: "apparel", price: 49.5};
 console.log (priceAfterCategoryDiscount(testProduct));
+
+//step 3
